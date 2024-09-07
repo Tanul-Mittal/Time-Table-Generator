@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>TIME TABLE MANAGEMENT SYSTEM</title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet"
+				type="text/css"
+				href="bootstrap.css"
+				/>
+		<link rel="stylesheet"
+			type="text/css"
+			href="center.css"
+			/>
+	</head>
+	<body>
+		<a href="home.html">HOME</a>
+		&nbsp;
+		<a href="about.html">ABOUT</a>
+		&nbsp;
+		<a href="contact.html" class="link">CONTACT US</a>
+		&nbsp;
+		<button class="btn btn-default js-go-day">DAY MODE</button>
+		&nbsp;
+		<button class="btn btn-default js-go-night">NIGHT MODE</button>
+		<hr></hr>
+		<h1 class="center">
+			GRAPHIC ERA DEEMED TO BE UNIVERSITY
+		</h1>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1">
+					<button id="backward">&lt;</button>
+				</div>
+				<div class="col-md-10">
+						<img id="bigImage" class="large-img" src="h.jpg" alt="MAINIMAGE"/> 
+				</div>
+				<div class="col-md-1">
+						<button id="forward">&gt;</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<img id="image1" class="crop-img" src="clg1.jpg" alt="IMAGE"/> 
+				</div>
+				<div class="col-md-3">
+					<img id="image2" class="crop-img" src="clg2.jpg" alt="IMAGE"/> 
+				</div>
+				<div class="col-md-3">
+					<img id="image3" class="crop-img" src="clg3.jpg" alt="IMAGE"/> 
+				</div>
+				<div class="col-md-3">
+					<img id="image4" class="crop-img" src="clg4.jpg" alt="IMAGE"/> 
+				</div>
+			</div>
+		</div>
+		<script>
+		var paused = false;
+		//big image is that image
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+		var counter = 1;
+		//manually click mini image
+		$("#image"+counter).click();
+		$("#backward").click(function (){
+			counter = counter - 1;
+			if(counter < 1){
+				counter = 4;
+			}
+			$("#image"+counter).click();
+		});
+		$("#forward").click(function (){
+			counter = counter + 1;
+			if(counter > 4){
+				counter = 1;
+			}
+			$("#image"+counter).click();
+		});
+		$("#bigImage").click(function (){
+			paused = !paused;
+		});
+		setInterval(function (){
+			if(!paused){
+				$("#forward").click();
+			};
+		}, 2000);
+	</script>
+		<h2>
+			 Time table for IIIrd semester students
+		</h2>
+		<div class="container">
+            <h3>SECTIONS</h3>
+            <div class="row">
+			<div class="col-md-5">
+				<a href="tt1.html">
+				<img id="image1" class="crop-img" src="tt1.png" alt="time table for section A"/> 
+				<p>SECTION A</p>
+				</a>
+			</div>
+			<div class="col-md-5">
+				<a href="tt2.html">
+				<img id="image2" class="crop-img" src="tt2.jpg" alt="time table for section B"/> 
+				<p>SECTION B</p>
+			</a>
+			</div>
+		</div>
+			<div class="row">
+			<div class="col-md-5">
+				<a href="tt3.html">
+				<img id="image3" class="crop-img" src="tt3.png" alt="time table for section C"/> 
+				<p>SECTION C</p>
+				</a>
+			</div>
+			<div class="col-md-5">
+				<a href="tt4.html">
+				<img id="image4" class="crop-img" src="tt4.png" alt="time table for section D"/> 
+				<p>SECTION D</p>
+			</a>
+			</div>
+		</div>
+
+        </div>
+        <script>
+$('.js-go-night').click(function(){
+$('body').addClass('night');
+$('div').addClass('night');
+$('li').addClass('night');
+		});
+
+		$('.js-go-day').click(function(){
+			$('body').removeClass('night');
+$('div').removeClass('night');
+$('li').removeClass('night');
+		});
+	</script>
+	</body>
+</html>

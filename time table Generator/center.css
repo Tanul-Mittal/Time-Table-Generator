@@ -1,0 +1,52 @@
+h1{
+  font-family:sans-serif;
+  text-decoration: underline;
+}
+h2{
+  text-decoration: underline; 
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:black;
+  background:white;
+}
+.crop-img{
+  max-height:150px;
+  max-width:100%;
+}
+.center {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+.night{
+    background:#121212;
+    border-color: white;
+    color:white;
+}
+.night a{
+  color: white;
+}
+.crop-img{
+  min-height:100px;
+  max-height: 100px;
+  max-width:100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#bigImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Optional: Ensure the image doesn't exceed its container's width */
+}
+.large-img{
+  align-content: center;
+  max-height: 400px;
+  min-height: 400px;
+  max-width:100%;
+  margin-bottom: 10px;
+}
+

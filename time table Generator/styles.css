@@ -1,0 +1,24 @@
+body{
+	background: black;
+	color:white;
+}
+a{
+	color:gray;
+	text-decoration: none;
+
+}
+a:hover{
+	color:black;
+	background:white;
+}
+.link:hover{
+	color:blue;
+	background: white;
+}
+h1{
+	font-family:serif;
+	font-size: 50pt;
+}
+.indent {
+	margin-left:10px;
+}

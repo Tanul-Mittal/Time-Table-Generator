@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to view timetables</title>
+    <link rel="stylesheet" href="log.css">
+    <script>
+        function login() {
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+
+            if (username==="student" && password==="01"){
+                window.location.href = "home.html";
+            } 
+            else{
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <form onsubmit="event.preventDefault(); login();">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

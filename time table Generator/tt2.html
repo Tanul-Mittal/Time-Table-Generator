@@ -1,0 +1,39 @@
+<html>
+<!--javascript included-->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet"
+        type="text/css"
+        href="center.css"
+        />
+<body>
+  <a href="home.html">HOME</a>
+    &nbsp;
+    <a href="about.html">ABOUT</a>
+    &nbsp;
+    <a href="contact.html" class="link">CONTACT US</a>
+    &nbsp;
+    <button class="btn btn-default js-go-day">DAY MODE</button>
+    &nbsp;
+    <button class="btn btn-default js-go-night">NIGHT MODE</button>
+    <hr></hr>
+    <h1>TIMETABLE FOR SECTION B</h1>
+    <img id="image4" src="t2.png" alt="time table for section B"/> 
+    <p>TCS-308 --> Logic Design and Computer Organization,Mr. Komal Bisht</p>
+    <p>TCS-342 --> Object Oriented Programming with C++,Mr. Shivam Aggarwal</p>
+    <p>TMA-301 --> Discrete Structures and Combinatorics,Dr. Alice</p>
+    <p>TCS-302 --> Data Structures with C,Mr. Yash Mittal</p>
+    <script>
+    $('.js-go-night').click(function(){
+    $('body').addClass('night');
+    $('div').addClass('night');
+    $('table').addClass('night');
+        });
+
+        $('.js-go-day').click(function(){
+          $('body').removeClass('night');
+    $('div').removeClass('night');
+    $('table').removeClass('night');
+        });
+      </script>
+</body>
+</html>

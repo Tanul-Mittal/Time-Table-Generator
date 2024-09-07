@@ -1,0 +1,34 @@
+<html>
+<!--javascript included-->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet"
+        type="text/css"
+        href="center.css"
+        />
+<body>
+  <a href="home.html">HOME</a>
+    &nbsp;
+    <a href="about.html">ABOUT</a>
+    &nbsp;
+    <a href="contact.html" class="link">CONTACT US</a>
+    &nbsp;
+    <button class="btn btn-default js-go-day">DAY MODE</button>
+    &nbsp;
+    <button class="btn btn-default js-go-night">NIGHT MODE</button>
+    <hr></hr>
+    	<h1>CONTACT US</h1>
+    	<p>Contact No.:8787878787</p>
+<script>
+$('.js-go-night').click(function(){
+$('body').addClass('night');
+$('div').addClass('night');
+$('table').addClass('night');
+    });
+
+    $('.js-go-day').click(function(){
+      $('body').removeClass('night');
+$('div').removeClass('night');
+$('table').removeClass('night');
+    });
+  </script>
+</body>
